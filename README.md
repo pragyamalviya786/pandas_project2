@@ -1,72 +1,56 @@
-# 🛒 Retail Sales Data Cleaning using Pandas
+# 📊 Sales 2018 Data Cleaning Project (Python | Pandas)
 
 ## 📌 Project Overview
-This project demonstrates a complete data cleaning workflow using **Python** and **Pandas** on a retail sales dataset.  
-The objective is to preprocess raw sales data by removing unnecessary columns and preparing the dataset for further analysis, reporting, and visualization.
+This project focuses on cleaning and preprocessing the 2018 sales dataset using Python and Pandas.  
+The objective is to remove unnecessary data, handle missing values, and prepare the dataset for analysis and reporting.
+
+---
+
+## 🧹 Data Cleaning Workflow
+
+### 1. Dataset Loading
+- Loaded raw dataset (`sales2018.csv`)
+- Imported dataset using Pandas
+
+### 2. Data Inspection
+- Displayed first 5 rows using `head()`
+- Checked dataset structure using `info()`
+- Verified dataset shape
+- Analyzed missing values
+
+### 3. Data Cleaning Operations
+- Removed unnecessary columns:
+  - `promo_bin_2`
+  - `promo_discount_2`
+  - `promo_type_2`
+- Removed duplicate rows
+- Filled missing values in `promo_bin_1`
+
+### 4. Export Cleaned Dataset
+- Saved cleaned dataset as `sales2018_cleaned.csv`
+
+---
+
+## 🛠️ Tools & Technologies Used
+- Python  
+- Pandas  
+- VS Code  
+
+---
+
+## 📁 Output File
+- `sales2018_cleaned.csv` → Final cleaned dataset
+
+## 📸 Project Output Preview
+
+![Sales 2018 Output](sales2018.png)
+
+---
+
+## 🎯 Key Outcome
+The dataset was successfully cleaned by removing duplicates, handling missing values, and dropping irrelevant columns, making it ready for further data analysis and business insights.
 
 ---
 
 ## 👩‍💻 Author
-### **Pragya Malviya**
-
----
-
-## 🛠️ Tech Stack
-- 🐍 Python
-- 📊 Pandas
-
----
-
-## 📂 Dataset Information
-
-### 📥 Input File
-`sales2018.csv`
-
-### 📤 Cleaned Output File
-`sales2018_cleaned.csv`
-
----
-
-## ✨ Key Operations Performed
-✔️ Loaded the dataset using Pandas  
-✔️ Inspected dataset structure and dimensions  
-✔️ Checked missing values  
-✔️ Removed unnecessary promotional columns  
-✔️ Exported cleaned dataset into a new CSV file  
-
----
-
-## 🗑️ Columns Removed
-The following columns were removed from the dataset:
-
-- `promo_bin_2`
-- `promo_discount_2`
-- `promo_type_2`
-
----
-
-## 💻 Python Implementation
-
-```python
-import pandas as pd
-
-# Load dataset
-df = pd.read_csv("sales2018.csv")
-
-# Inspect dataset
-print(df.head())
-print(df.info())
-print(df.shape)
-print(df.isnull().sum())
-
-# Data cleaning
-df.drop(columns=[
-    "promo_bin_2",
-    "promo_discount_2",
-    "promo_type_2"
-], inplace=True)
-
-# Save cleaned dataset
-df.to_csv("sales2018_cleaned.csv", index=False)
-
-print("Dataset cleaned successfully")
+Pragya Malviya
